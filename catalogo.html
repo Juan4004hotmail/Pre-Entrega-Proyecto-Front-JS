@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo | Ragnarok Bookstore</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+
+<body>
+
+  <div class="header">
+    <img src="img/logo_3.jpg" alt="Letra R épica dorada con fondo negro" class="logo">
+    <div class="texto-header"></div>
+    <h1>Ragnarok Bookstore</h1>
+  </div>
+  </div>
+
+  <section class="hero">
+    <h2>Explora nuestro catálogo</h2>
+    <h3>Sumérgete en un mundo de conocimiento y aventuras</h3>
+  </section>
+
+
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="catalogo.html">Catálogo</a></li>
+      <li><a href="carrito.html">Mi Pedido</a></li>
+      <li><a href="nosotros.html">Nosotros</a></li>
+      <li><a href="reseñas.html">Reseñas</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <div class="cart">Pedido: <span id="cartCount">0</span></div>
+
+  <main>
+    <section class="catalogo-completo">
+      <h2>Nuestro Catálogo Completo</h2>
+      <div class="catalogo-grid">
+
+        <div class="fila-libro" data-id="libro1">
+          <img src="img/SombradelosDioses.jpg" alt="Portada libro 1">
+          <span class="titulo">La Sombra de los Dioses</span>
+          <span class="autor">John Gwynee</span>
+          <span class="precio">$48.500</span>
+          <button>Agregar</button>
+          <button class="ver-mas-btn">Ver +</button>
+          <p class="sinopsis oculto">
+            Ha pasado un siglo desde que los dioses lucharon y se extinguieron. 
+            Ahora solo quedan sus huesos, que prometen un gran poder a aquellos lo suficientemente valientes como para buscarlos. 
+            Mientras los susurros de guerra resuenan en la tierra de Vigrið, el destino sigue los pasos de tres guerreros: 
+            una cazadora en una búsqueda peligrosa, una mujer noble que busca la fama en la batalla y un esclavo que busca venganza entre los mercenarios conocidos como los Hermanos de Sangre. 
+            Los tres darán forma al destino del mundo, ya que una vez más cae bajo la sombra de los dioses.
+          </p>
+            <!-- Estrellas -->
+          <div class="rating">
+            <span class="star" data-value="1">★</span>
+            <span class="star" data-value="2">★</span>
+            <span class="star" data-value="3">★</span>
+            <span class="star" data-value="4">★</span>
+            <span class="star" data-value="5">★</span>
+          </div>
+            <!-- Modal para reseña -->
+          <div class="modal-reseña oculto">
+            <h4>Dejá tu reseña</h4>
+            <input type="text" class="input-nombre" placeholder="Nombre y apellido">
+            <textarea class="input-opinion" placeholder="Escribe tu opinión aquí..."></textarea>
+            <button class="publicar-reseña-btn">Publicar</button>
+            <button class="cerrar-modal-btn">Cerrar</button>
+          </div>
+        </div>
+
+        <div class="fila-libro" data-id="libro2">
+          <img src="img/HambredelosDioses.jpg" alt="Portada libro 2">
+          <span class="titulo">El Hambre de los Dioses</span>
+          <span class="autor">John Gwynee</span>
+          <span class="precio">$45.800</span>
+          <button>Agregar</button>
+                    <button class="ver-mas-btn">Ver +</button>
+          <p class="sinopsis oculto">
+            El hambre de los dioses es la continuación de la aclamada saga de fantasía épica de John Gwynne inspirada en la civilización nórdica, repleta de mitos, magia y venganzas sangrientas.
+            Lik-Rifa, la legendaria diosa dragona, ha salido de su cautiverio eterno. Ahora urde una nueva era de sangre y conquistas.
+            Mientras Orka continúa la búsqueda de su hijo desaparecido, los Hermanos de Sangre emprenden una desesperada carrera hacia el sur para salvar a uno de los suyos y Varg da sus primeros pasos en la senda de la venganza.
+            Elvar se ha comprometido a cumplir su juramento de sangre y rescatar a un prisionero de las garras de Lik-Rifa y sus seguidores descendientes de la dragona, pero antes debe convencer a los Terrores de la Batalla para que la sigan.
+            Pero ni siquiera los Hermanos de Sangre y los Terrores de la Batalla pueden enfrentarse solos con un dragón.
+          </p>
+            <!-- Estrellas -->
+          <div class="rating">
+            <span class="star" data-value="1">★</span>
+            <span class="star" data-value="2">★</span>
+            <span class="star" data-value="3">★</span>
+            <span class="star" data-value="4">★</span>
+            <span class="star" data-value="5">★</span>
+          </div>
+            <!-- Modal para reseña -->
+          <div class="modal-reseña oculto">
+            <h4>Dejá tu reseña</h4>
+            <input type="text" class="input-nombre" placeholder="Nombre y apellido">
+            <textarea class="input-opinion" placeholder="Escribe tu opinión aquí..."></textarea>
+            <button class="publicar-reseña-btn">Publicar</button>
+            <button class="cerrar-modal-btn">Cerrar</button>
+          </div>
+        </div>
+
+        <div class="fila-libro" data-id="libro3">
+          <img src="img/FuriadelosDioses.jpg" alt="Portada libro 3">
+          <span class="titulo">La Furia de los Dioses</span>
+          <span class="autor">John Gwynee</span>
+          <span class="precio">$49.900</span>
+          <button>Agregar</button>
+                    <button class="ver-mas-btn">Ver +</button>
+          <p class="sinopsis oculto">
+            Varg ha dejado atrás el sufrimiento de su vida pasada y se ha convertido en un miembro de pleno derecho de los Hermanos de Sangre. Pero, ahora, sus nuevos camaradas y él se enfrentan al mayor desafío de sus vidas: matar un dragón.
+            Elvar dedica todos sus esfuerzos a consolidar su poder en Snakavik, donde tiene que hacer frente a amenazas internas y externas. Mientras lucha para imponer su autoridad ante la inminente Guerra, debe afrontar una tarea, sin duda, insuperable: dominar la ferocidad de un dios lobo.
+            Biórr y su banda de guerreros se dirigen al norte, sedientos de sangre, pero Gudvarr se mueve por sus propios intereses con la esperanza de ganarse el favor de Lik-Rifa y realizar sus ambiciones.
+            Todos los caminos llevan a Snakavik, donde todo está preparándose para la batalla final: una colisión titánica que sacudirá los cimientos del mundo y será testigo de la verdadera furia de los dioses.
+          </p>
+            <!-- Estrellas -->
+          <div class="rating">
+            <span class="star" data-value="1">★</span>
+            <span class="star" data-value="2">★</span>
+            <span class="star" data-value="3">★</span>
+            <span class="star" data-value="4">★</span>
+            <span class="star" data-value="5">★</span>
+          </div>
+            <!-- Modal para reseña -->
+          <div class="modal-reseña oculto">
+            <h4>Dejá tu reseña</h4>
+            <input type="text" class="input-nombre" placeholder="Nombre y apellido">
+            <textarea class="input-opinion" placeholder="Escribe tu opinión aquí..."></textarea>
+            <button class="publicar-reseña-btn">Publicar</button>
+            <button class="cerrar-modal-btn">Cerrar</button>
+          </div>
+        </div>
+
+        <div class="fila-libro" data-id="libro4">
+          <img src="img/AlasdeSangre.jpg" alt="Portada libro 4">
+          <span class="titulo">Alas de Sangre</span>
+          <span class="autor">Rebecca Yarros</span>
+          <span class="precio">$41.900</span>
+          <button>Agregar</button>
+                    <button class="ver-mas-btn">Ver +</button>
+          <p class="sinopsis oculto">
+            Violet Sorrengail creía que a sus veinte años se uniría al Cuadrante de los Escribas para vivir una vida tranquila, estudiando sus amados libros y las historias antiguas que tanto le fascinan. Sin embargo, por órdenes de su madre, la temida comandante general, Violet debe unirse a los miles de candidatos que luchan por formar parte de la élite de Navarre: los jinetes de dragones.
+            Cuando eres más pequeña y frágil que los demás tu vida corre peligro, porque los dragones no se vinculan con humanos débiles; de hecho, los incineran. Sumado a esto, con más jinetes que dragones disponibles, buena parte de los candidatos mataría a Violet con tal de mejorar sus probabilidades de éxito; otros, como el despiadado Xaden Riorson, el líder de ala más poderoso del Cuadrante, la asesinarían simplemente por ser la hija de la comandante general. Para sobrevivir, necesitará aprovechar al máximo todo su ingenio.
+            Día tras día, la guerra que se libra al exterior del Colegio se torna más letal, las defensas del reino se debilitan y los muertos aumentan. Por si fuera poco, Violet sospecha que los líderes de Navarre esconden un terrible secreto.
+            Amistad, rivalidad y pasión... en el Colegio de Guerra de Basgiath todos tienen una agenda oculta y saben que una vez adentro solo hay dos posibilidades: graduarse o morir.
+          </p>
+            <!-- Estrellas -->
+          <div class="rating">
+            <span class="star" data-value="1">★</span>
+            <span class="star" data-value="2">★</span>
+            <span class="star" data-value="3">★</span>
+            <span class="star" data-value="4">★</span>
+            <span class="star" data-value="5">★</span>
+          </div>
+            <!-- Modal para reseña -->
+          <div class="modal-reseña oculto">
+            <h4>Dejá tu reseña</h4>
+            <input type="text" class="input-nombre" placeholder="Nombre y apellido">
+            <textarea class="input-opinion" placeholder="Escribe tu opinión aquí..."></textarea>
+            <button class="publicar-reseña-btn">Publicar</button>
+            <button class="cerrar-modal-btn">Cerrar</button>
+          </div>
+        </div>
+
+        <div class="fila-libro" data-id="libro5">
+          <img src="img/AlasdeHierro.jpg" alt="Portada libro 5">
+          <span class="titulo">Alas de Hierro</span>
+          <span class="autor">Rebecca Yarros</span>
+          <span class="precio">$52.500</span>
+          <button>Agregar</button>
+                    <button class="ver-mas-btn">Ver +</button>
+          <p class="sinopsis oculto">
+            Todos esperaban que Violet Sorrengail muriera en su primer año en el Colegio de Guerra de Basgiath, incluso ella misma. Pero la Trilla fue tan solo la primera de una serie de pruebas imposibles destinadas a deshacerse de los pusilánimes, los indignos y los desafortunados.
+            Ahora comienza el verdadero entrenamiento y Violet no sabe cómo logrará superarlo. No solo porque es brutal y agotador ni porque está diseñado para llevar al límite el umbral del dolor de los jinetes, sino porque el nuevo vicecomandante está empeñado en demostrar a Violet lo débil que es a menos que traicione al hombre que ama.
+            Aunque el cuerpo de Violet es más frágil que el de sus compañeros, su fuerza radica en su ingenio y voluntad de hierro. Además, los líderes están olvidando la lección más importante que Basgiath les ha enseñado: los jinetes de dragones crean sus propias reglas.
+            La voluntad de sobrevivir no será suficiente este año, porque Violet conoce el secreto que se oculta entre los muros del colegio y nada, ni siquiera el fuego de dragón, será suficiente para salvarlos.
+          </p>
+            <!-- Estrellas -->
+          <div class="rating">
+            <span class="star" data-value="1">★</span>
+            <span class="star" data-value="2">★</span>
+            <span class="star" data-value="3">★</span>
+            <span class="star" data-value="4">★</span>
+            <span class="star" data-value="5">★</span>
+          </div>
+            <!-- Modal para reseña -->
+          <div class="modal-reseña oculto">
+            <h4>Dejá tu reseña</h4>
+            <input type="text" class="input-nombre" placeholder="Nombre y apellido">
+            <textarea class="input-opinion" placeholder="Escribe tu opinión aquí..."></textarea>
+            <button class="publicar-reseña-btn">Publicar</button>
+            <button class="cerrar-modal-btn">Cerrar</button>
+          </div>
+        </div>
+
+        <div class="fila-libro" data-id="libro6">
+          <img src="img/AlasdeOnix.jpg" alt="Portada libro 6">
+          <span class="titulo">Alas de Onix</span>
+          <span class="autor">Rebecca Yarros</span>
+          <span class="precio">$50.100</span>
+          <button>Agregar</button>
+                    <button class="ver-mas-btn">Ver +</button>
+          <p class="sinopsis oculto">
+            Tras casi dieciocho meses en el Colegio de Guerra Basgiath, Violet Sorrengail tiene claro que no queda tiempo para entrenar. Hay que tomar decisiones. La batalla ha comenzado y, con enemigos acercándose a las murallas e infiltrados en sus propias filas, es imposible saber en quién confiar.
+            Ahora Violet deberá emprender un viaje fuera de los límites de Aretia en busca de aliados de tierras desconocidas que acepten pelear por Navarre. La misión pondrá a prueba su suerte, y la obligará a usar todo su ingenio y fortaleza para salvar a quienes más ama: sus dragones, su familia, su hogar y a él.
+            Aunque eso signifique tener que guardar un secreto tan peligroso que podría destruirlo todo.
+            Navarre necesita un ejército. Necesita poder. Necesita magia. Y necesitará algo que solo Violet puede encontrar: la verdad.
+            Pero una tormenta se aproxima… y no todos sobrevivirán a su furia.
+          </p>
+            <!-- Estrellas -->
+          <div class="rating">
+            <span class="star" data-value="1">★</span>
+            <span class="star" data-value="2">★</span>
+            <span class="star" data-value="3">★</span>
+            <span class="star" data-value="4">★</span>
+            <span class="star" data-value="5">★</span>
+          </div>
+            <!-- Modal para reseña -->
+          <div class="modal-reseña oculto">
+            <h4>Dejá tu reseña</h4>
+            <input type="text" class="input-nombre" placeholder="Nombre y apellido">
+            <textarea class="input-opinion" placeholder="Escribe tu opinión aquí..."></textarea>
+            <button class="publicar-reseña-btn">Publicar</button>
+            <button class="cerrar-modal-btn">Cerrar</button>
+          </div>
+        </div>
+
+        <div class="fila-libro" data-id="libro7">
+          <img src="img/ElPsicoanalista.jpg" alt="Portada libro 7">
+          <span class="titulo">El Psicoanalista</span>
+          <span class="autor">John Katzenbach</span>
+          <span class="precio">$38.500</span>
+          <button>Agregar</button>
+                    <button class="ver-mas-btn">Ver +</button>
+          <p class="sinopsis oculto">
+            El día de su 53 cumpleaños, el doctor Starks, un psicoanalista con una larga carrera a sus espaldas, recibe un misterioso e inquietante anónimo. Starks tendrá que emplear toda su astucia para, en quince días, averiguar quién es el autor de la misiva. De no conseguirlo, deberá elegir entre suicidarse o ser testigo de cómo, uno tras otro, sus familiares y amigos van siendo asesinados por un psicópata que promete llevar hasta el fin su venganza.
+            John Katzenbach alcanzó la popularidad con la publicación de El psicoanalista, un thriller inmejorable en el que explora con maestría las mentes desviadas.
+          </p>
+            <!-- Estrellas -->
+          <div class="rating">
+            <span class="star" data-value="1">★</span>
+            <span class="star" data-value="2">★</span>
+            <span class="star" data-value="3">★</span>
+            <span class="star" data-value="4">★</span>
+            <span class="star" data-value="5">★</span>
+          </div>
+            <!-- Modal para reseña -->
+          <div class="modal-reseña oculto">
+            <h4>Dejá tu reseña</h4>
+            <input type="text" class="input-nombre" placeholder="Nombre y apellido">
+            <textarea class="input-opinion" placeholder="Escribe tu opinión aquí..."></textarea>
+            <button class="publicar-reseña-btn">Publicar</button>
+            <button class="cerrar-modal-btn">Cerrar</button>
+          </div>
+        </div>
+
+        <div class="fila-libro" data-id="libro8">
+          <img src="img/HistoriaLoco.jpg" alt="Portada libro 8">
+          <span class="titulo">La Historia del Loco</span>
+          <span class="autor">John Katzenbach</span>
+          <span class="precio">$41.500</span>
+          <button>Agregar</button>
+                    <button class="ver-mas-btn">Ver +</button>
+          <p class="sinopsis oculto">
+            Su familia lo recluyó en el psiquiátrico tras una conducta imprevisible. Pero un reencuentro en los terrenos de la clausurada institución remueve algo profundo en su mente agitada: unos recuerdos sombríos sobre los truculentos hechos que condujeron al cierre del W. S. Hospital, y el asesinato sin resolver de una joven enfermera, cuyo cadáver mutilado fue encontrado una noche después del cierre de las luces. 
+            La policía sospechó de un paciente, pero sólo ahora, con la reaparición del asesino, se conocerá la respuesta.
+          </p>
+            <!-- Estrellas -->
+          <div class="rating">
+            <span class="star" data-value="1">★</span>
+            <span class="star" data-value="2">★</span>
+            <span class="star" data-value="3">★</span>
+            <span class="star" data-value="4">★</span>
+            <span class="star" data-value="5">★</span>
+          </div>
+            <!-- Modal para reseña -->
+          <div class="modal-reseña oculto">
+            <h4>Dejá tu reseña</h4>
+            <input type="text" class="input-nombre" placeholder="Nombre y apellido">
+            <textarea class="input-opinion" placeholder="Escribe tu opinión aquí..."></textarea>
+            <button class="publicar-reseña-btn">Publicar</button>
+            <button class="cerrar-modal-btn">Cerrar</button>
+          </div>
+        </div>
+
+        <div class="fila-libro" data-id="libro9">
+          <img src="img/PazDiablo.jpg" alt="Portada libro 9">
+          <span class="titulo">Deja en Paz al Diablo</span>
+          <span class="autor">John Verdon</span>
+          <span class="precio">$27.000</span>
+          <button>Agregar</button>
+                    <button class="ver-mas-btn">Ver +</button>
+          <p class="sinopsis oculto">
+            Nada es nunca lo que parece. Y menos si David Gurney está involucrado. Han pasado seis meses. 
+            David Gurney apenas ha conseguido reincorporarse a una cierta normalidad después de haberse encontrado al borde de la muerte tras resolver el caso más peligroso al que se había enfrentado. 
+            Madeleine, su esposa, está preocupada; Gurney ha sido diagnosticado con síndrome de estrés post traumático y nada parece alegrarle. Días después el ex detective recibe una llamada. 
+            Connie Clark, la periodista que creó la leyenda de Súperpoli y lo catapultó a la fama quiere pedirle ayuda. 
+            Su hija Kim está realizando un documental sobre las familias de las víctimas de un asesino en serie al que nunca atraparon, el Buen Pastor, y Connie quisiera que Gurney supervisara sus investigaciones y la guiara. 
+            En parte por aburrimiento y en parte por hacerle un favor a Connie, Gurney acepta. 
+            Sin embargo, esto no será más que el principio. 
+            Incapaz de ponerle coto a su curiosidad y a su necesidad de resolver cada una de las incógnitas que se le presentan, David Gurney se verá arrastrado a una investigación para descubrir la verdadera identidad del asesino. 
+            Un asesino que es tan imprevisible como peligroso, un diablo al que convendría dejar en paz.
+          </p>
+            <!-- Estrellas -->
+          <div class="rating">
+            <span class="star" data-value="1">★</span>
+            <span class="star" data-value="2">★</span>
+            <span class="star" data-value="3">★</span>
+            <span class="star" data-value="4">★</span>
+            <span class="star" data-value="5">★</span>
+          </div>
+            <!-- Modal para reseña -->
+          <div class="modal-reseña oculto">
+            <h4>Dejá tu reseña</h4>
+            <input type="text" class="input-nombre" placeholder="Nombre y apellido">
+            <textarea class="input-opinion" placeholder="Escribe tu opinión aquí..."></textarea>
+            <button class="publicar-reseña-btn">Publicar</button>
+            <button class="cerrar-modal-btn">Cerrar</button>
+          </div>
+        </div>
+
+        <div class="fila-libro" data-id="libro10">
+          <img src="img/SangreyCenizas.jpg" alt="Portada libro 10">
+          <span class="titulo">De Sangre y Cenizas</span>
+          <span class="autor">Jennifer L. Armentrout</span>
+          <span class="precio">$41.900</span>
+          <button>Agregar</button>
+                    <button class="ver-mas-btn">Ver +</button>
+          <p class="sinopsis oculto">
+            UNA DONCELLA.
+            Elegida desde su nacimiento para dar comienzo a una nueva era, la vida de Poppy nunca le ha pertenecido. La vida de la Doncella es solitaria. 
+            Jamás la tocarán. Jamás la mirarán. Jamás le hablarán. Jamás sentirá placer. 
+            Mientras espera el día de su Ascensión, preferiría estar con los guardias luchando contra el mal que se llevó a su familia que preparándose para que los dioses la encuentren lo bastante digna. 
+            Pero la elección nunca ha sido suya.
+            UN DEBER.
+            El futuro del reino entero recae sobre los hombros de Poppy, algo que ni siquiera está demasiado segura de querer para ella. 
+            Porque la Doncella tiene corazón. Y alma. Y deseo. Y cuando Hawke, un guardia de ojos dorados que ha jurado garantizar su Ascensión, entra en su vida, el destino y el deber se entremezclan con el deseo y la necesidad. 
+            Él incita su ira, hace que se cuestione todo aquello en lo que cree y la tienta con lo prohibido.
+            UN REINO.
+            Abandonado por los dioses y temido por los mortales, un reino caído está resurgiendo, decidido a recuperar lo que cree que es suyo mediante la violencia.
+          </p>
+            <!-- Estrellas -->
+          <div class="rating">
+            <span class="star" data-value="1">★</span>
+            <span class="star" data-value="2">★</span>
+            <span class="star" data-value="3">★</span>
+            <span class="star" data-value="4">★</span>
+            <span class="star" data-value="5">★</span>
+          </div>
+            <!-- Modal para reseña -->
+          <div class="modal-reseña oculto">
+            <h4>Dejá tu reseña</h4>
+            <input type="text" class="input-nombre" placeholder="Nombre y apellido">
+            <textarea class="input-opinion" placeholder="Escribe tu opinión aquí..."></textarea>
+            <button class="publicar-reseña-btn">Publicar</button>
+            <button class="cerrar-modal-btn">Cerrar</button>
+          </div>
+        </div>
+
+        <div class="fila-libro" data-id="libro11">
+          <img src="img/CuentosPerdidos1.jpg" alt="Portada libro 11">
+          <span class="titulo">El Libro de los Cuentos Perdidos I</span>
+          <span class="autor">J.R.R. Tolkien</span>
+          <span class="precio">$39.900</span>
+          <button>Agregar</button>
+                    <button class="ver-mas-btn">Ver +</button>
+          <p class="sinopsis oculto">
+            El Libro de los Cuentos Perdidos fue la primera gran obra de imaginación de J.R.R. Tolkien, comenzada en 1916-1917, cuando tenía veinticinco años, y abandonada varios años después. 
+            Es en realidad el principio de toda la concepción de la Tierra Media y Valinor, y el primer esbozo de los mitos y leyendas que constituirían El Silmarillion. 
+            El marco narrativo es el largo viaje hacia el Oeste que emprende un marinero llamado Eriol (Aelfwíne) a Tol Eressëa, la isla solitaria donde habitan los Elfos. 
+            Allí conoce los Cuentos Perdidos de Elfenesse, en los que aparecen las ideas y concepciones más tempranas sobre los Dioses y los Elfos, 
+            los Enanos, los Balrogs y los Orcos, los Silmarils, los dos árboles de Valinor, Nargothrond y Gondolin, y la geografía y la cosmología de la Tierra Media.
+            El libro de los Cuentos Perdidos se publica en dos volúmenes. Este primer volumen contiene los cuentos de Valinor. 
+            Cada cuento es seguido de un comentario -un ensayo breve-, y de algún poema relacionado con el texto, y en cada uno de los volúmenes hay abundante información sobre el vocabulario y los nombres de las primeras lenguas élficas.
+          </p>
+            <!-- Estrellas -->
+          <div class="rating">
+            <span class="star" data-value="1">★</span>
+            <span class="star" data-value="2">★</span>
+            <span class="star" data-value="3">★</span>
+            <span class="star" data-value="4">★</span>
+            <span class="star" data-value="5">★</span>
+          </div>
+            <!-- Modal para reseña -->
+          <div class="modal-reseña oculto">
+            <h4>Dejá tu reseña</h4>
+            <input type="text" class="input-nombre" placeholder="Nombre y apellido">
+            <textarea class="input-opinion" placeholder="Escribe tu opinión aquí..."></textarea>
+            <button class="publicar-reseña-btn">Publicar</button>
+            <button class="cerrar-modal-btn">Cerrar</button>
+          </div>
+        </div>
+
+        <div class="fila-libro" data-id="libro12">
+          <img src="img/IslaMaldita.jpg" alt="Portada libro 12">
+          <span class="titulo">Isla Maldita</span>
+          <span class="autor">John Grisham</span>
+          <span class="precio">$38.299</span>
+          <button>Agregar</button>
+                    <button class="ver-mas-btn">Ver +</button>
+          <p class="sinopsis oculto">
+            Bruce Cable le cuenta a su amiga la escritora Mercer Mann una irresistible historia que bien podría convertirse en su nueva novela. 
+            Una poderosa empresa constructora está usando todos sus recursos para reclamar la propiedad de una isla semidesierta frente a Florida. 
+            Solo la última habitante del lugar, Lovely Jackson, se interpone en su camino.
+            Lo que la constructora desconoce es que se dice que Dark Isle está maldita: los ahogamientos, las desapariciones y la locura han sido el destino de los intrusos. 
+            Fue fundada por esclavos hace trescientos años y sus descendientes vivieron allí hasta 1955, cuando la última fue obligada a abandonarla. 
+            Lovely afirma ser su legítima propietaria, aunque no tiene ninguna manera de probarlo.
+            Pero con Cable, Mann y el abogado Steven Mahon luchando en su bando, la batalla solo acaba de empezar. 
+            Porque en esta isla con una historia violenta y misteriosa... el pasado nunca se deja atrás.
+          </p>
+            <!-- Estrellas -->
+          <div class="rating">
+            <span class="star" data-value="1">★</span>
+            <span class="star" data-value="2">★</span>
+            <span class="star" data-value="3">★</span>
+            <span class="star" data-value="4">★</span>
+            <span class="star" data-value="5">★</span>
+          </div>
+            <!-- Modal para reseña -->
+          <div class="modal-reseña oculto">
+            <h4>Dejá tu reseña</h4>
+            <input type="text" class="input-nombre" placeholder="Nombre y apellido">
+            <textarea class="input-opinion" placeholder="Escribe tu opinión aquí..."></textarea>
+            <button class="publicar-reseña-btn">Publicar</button>
+            <button class="cerrar-modal-btn">Cerrar</button>
+          </div>
+        </div>
+
+        <div class="fila-libro" data-id="libro13">
+          <img src="img/Desafiante.jpg" alt="Portada libro 13">
+          <span class="titulo">Desafiante</span>
+          <span class="autor">Brandon Sanderson</span>
+          <span class="precio">$39.900</span>
+          <button>Agregar</button>
+                    <button class="ver-mas-btn">Ver +</button>
+          <p class="sinopsis oculto">
+            La última entrega de Escuadrón, la saga épica sobre una chica que viajará más allá de las estrellas para salvar la destrucción del mundo que ama.
+            Spensa ha salido de la ninguna-parte, pero lo que vio en el espacio que se abre entre las estrellas la ha cambiado para siempre. 
+            Se enfrentó a los zapadores y por fin obtuvo respuestas a las preguntas que se hacía sobre sus propios y extraños dones citónicos.
+            Pero la Supremacía no ha desistido en su lucha por el dominio galáctico mientras ella no estaba. 
+            El equipo de Spensa, el Escuadrón Cielo, logró resistir ante Winzik y hasta sumar aliados a su causa, pero es solo cuestión de tiempo que la humanidad y el resto de la galaxia caigan.
+            Derrotar a sus enemigos pondrá a prueba todo el conocimiento que Spensa reunió en la ninguna-parte. 
+            Pero ser citónica es más complicado de lo que habría podido imaginar. 
+            Y ahora Spensa tendrá que decidir hasta dónde está dispuesta a llegar, si la victoria significa perderse a sí misma, y a sus amigos, en el proceso.
+            En el libro final de la saga Escuadrón la humanidad se liberará o caerá para siempre
+          </p>
+            <!-- Estrellas -->
+          <div class="rating">
+            <span class="star" data-value="1">★</span>
+            <span class="star" data-value="2">★</span>
+            <span class="star" data-value="3">★</span>
+            <span class="star" data-value="4">★</span>
+            <span class="star" data-value="5">★</span>
+          </div>
+            <!-- Modal para reseña -->
+          <div class="modal-reseña oculto">
+            <h4>Dejá tu reseña</h4>
+            <input type="text" class="input-nombre" placeholder="Nombre y apellido">
+            <textarea class="input-opinion" placeholder="Escribe tu opinión aquí..."></textarea>
+            <button class="publicar-reseña-btn">Publicar</button>
+            <button class="cerrar-modal-btn">Cerrar</button>
+          </div>
+        </div>
+
+        <div class="fila-libro" data-id="libro14">
+          <img src="img/Terapia.jpg" alt="Portada libro 14">
+          <span class="titulo">Terapia</span>
+          <span class="autor">Sebastian Fitzek</span>
+          <span class="precio">$40.900</span>
+          <button>Agregar</button>
+                    <button class="ver-mas-btn">Ver +</button>
+          <p class="sinopsis oculto">
+            Ni testigos ni pistas ni cadáver. 
+            Josy, la hija de doce años del conocido psiquiatra Viktor Larenz, desaparece en misteriosas circunstancias de la consulta del médico que la trata de una extraña enfermedad. 
+            Cuatro años después, Viktor, sumido en una profunda tristeza, se ha retirado a una remota casa en una isla del Mar del Norte. 
+            Allí lo localiza una hermosa desconocida que padece alucinaciones: ve constantemente a una niña pequeña, una niña que padece una extraña enfermedad y que desaparece de la consulta del médico sin dejar rastro. 
+            Viktor inicia entonces un tratamiento con la desconocida, pero la terapia se convierte paulatinamente en un dramático interrogatorio… ¿Es posible lo inconcebible?
+          </p>
+            <!-- Estrellas -->
+          <div class="rating">
+            <span class="star" data-value="1">★</span>
+            <span class="star" data-value="2">★</span>
+            <span class="star" data-value="3">★</span>
+            <span class="star" data-value="4">★</span>
+            <span class="star" data-value="5">★</span>
+          </div>
+            <!-- Modal para reseña -->
+          <div class="modal-reseña oculto">
+            <h4>Dejá tu reseña</h4>
+            <input type="text" class="input-nombre" placeholder="Nombre y apellido">
+            <textarea class="input-opinion" placeholder="Escribe tu opinión aquí..."></textarea>
+            <button class="publicar-reseña-btn">Publicar</button>
+            <button class="cerrar-modal-btn">Cerrar</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <script src="catalogoCompleto.js"></script>
+
+</body>
+
+<footer class="footer">
+  <div class="footer-contenido">
+    <div class="footer-seccion">
+      <h3>Ragnarok Bookstore</h3>
+      <p>El conocimiento ancestral nunca muere.<br>
+        Libros que despiertan la magia y la sabiduría interior.</p>
+    </div>
+
+    <div class="footer-seccion">
+      <h4>Enlaces Rápidos</h4>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="catalogo.html">Catálogo</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-seccion">
+      <h4>Contacto</h4>
+      <p>📧 contacto@ragnarokbookstore.com</p>
+      <p>📍 CABA, Buenos Aires - Argentina</p>
+    </div>
+  </div>
+
+  <div class="footer-copy">
+    <p>ᛇ ᛈ ᛉ ᛊ — © 2025 Ragnarok Bookstore — ᛇ ᛈ ᛉ ᛊ</p>
+  </div>
+</footer>
+
+</html>

@@ -1,0 +1,727 @@
+body {
+  background-color: #2b2b2b;
+  /* gris oscuro, pero no negro */
+  color: #f5f5f5;
+  /* texto claro para contraste */
+  font-family: 'Cinzel', serif;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Comienzo Encabezado y Bienvenida */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  /* espacio entre logo y texto */
+  padding: 1.5rem;
+  background-color: #111;
+  border-bottom: 2px solid gold;
+  position: relative;
+}
+
+.texto-header {
+  text-align: center;
+}
+
+.header h1 {
+  position: relative;
+  color: gold;
+  font-family: 'Cinzel', serif;
+  z-index: 1;
+  /* por encima del entramado */
+  margin: 0;
+}
+
+.logo {
+  position: absolute;
+  left: 20px;
+  width: 100px;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+
+.hero {
+  background-image: url('img/fondo_hero.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  text-align: center;
+  padding: 25px 20px;
+  position: relative;
+  border-bottom: 2px solid gold;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  /* Para oscurecer un poco la imagen de Bienvenida */
+  z-index: 1;
+}
+
+.hero h2,
+.hero h3 {
+  position: relative;
+  z-index: 2;
+  /* Para que el texto quede encima */
+}
+/* Fin Encabezado y Bienvenida */
+
+
+/* Comienzo Inicio (con Cards) */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.grid-container .book-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+}
+
+button {
+  padding: 8px 12px;
+  background: #111;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background: #333;
+}
+
+.navbar {
+  background-color: #111;
+  padding: 10px 20px;
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  /* Menú horizontal */
+  justify-content: center;
+  gap: 20px;
+}
+
+.navbar li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.navbar li a:hover {
+  background-color: #444;
+  color: #f4d03f;
+}
+
+
+.cards-libros {
+  padding: 2rem;
+  text-align: center;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: rgba(0, 0, 0, 0.8);
+  border: 2px solid gold;
+  border-radius: 15px;
+  padding: 1rem;
+  width: 200px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.card h3 {
+  color: #f5f5f5;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.card .precio {
+  color: gold;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.card button {
+  background: gold;
+  color: #1a1a1a;
+  font-weight: bold;
+  padding: 0.6rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.card button:hover {
+  background: #d4af37;
+  transform: scale(1.05);
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+}
+/* Fin Inicio (con Cards) */
+
+
+/* Comienzo sección Catálogo Completo */
+.catalogo-completo {
+  padding: 2rem;
+}
+
+.catalogo-completo h2 {
+  color: gold;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-family: 'Cinzel', serif;
+  letter-spacing: 2px;
+}
+
+.catalogo-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.fila-libro {
+  display: grid;
+  grid-template-columns: 60px 2fr 1.5fr 1fr auto;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.8rem 1rem;
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid gold;
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+.fila-libro:hover {
+  background: rgba(255, 215, 0, 0.1);
+}
+
+.fila-libro img {
+  width: 50px;
+  height: auto;
+  border-radius: 5px;
+  border: 1px solid gold;
+}
+
+.fila-libro .titulo {
+  color: #f5f5f5;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.fila-libro .autor {
+  color: #ccc;
+  font-style: italic;
+  font-size: 1.2rem;
+}
+
+.fila-libro .precio {
+  color: gold;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.fila-libro button {
+  background: gold;
+  color: #1a1a1a;
+  font-weight: bold;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.fila-libro button:hover {
+  background: #d4af37;
+  transform: scale(1.05);
+}
+
+.oculto {
+  display: none;
+}
+
+/* Botón "Ver +" */
+.ver-mas-btn {
+  margin-top: 6px;
+  padding: 4px 8px;
+  background: transparent;
+  border: 1px solid gold;
+  color: gold;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Estrellas */
+.rating {
+  margin-top: 10px;
+}
+
+.rating .star {
+  font-size: 1.3rem;
+  color: rgba(255,255,255,0.25);
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.rating .star.hovered,
+.rating .star.selected {
+  color: gold;
+}
+
+/* Modal reseña */
+.modal-reseña {
+  margin-top: 10px;
+  background: #111;
+  border: 1px solid #444;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.modal-reseña input,
+.modal-reseña textarea {
+  width: 100%;
+  background: #222;
+  border: 1px solid #666;
+  color: #eee;
+  padding: -10px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+/* Fin sección Catálogo Completo */
+
+
+/* Inicio Sección Mi Pedido (Carrito) */
+.cart {
+  position: fixed;
+  /* Siempre visible en la esquina */
+  top: 15px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid gold;
+  border-radius: 8px;
+  padding: 0.4rem 0.8rem;
+  font-family: 'Cinzel', serif;
+  font-size: 1rem;
+  color: gold;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+.cart span {
+  font-weight: bold;
+  color: #fff;
+  /* resalta el número en blanco */
+  background: gold;
+  padding: 2px 6px;
+  border-radius: 50%;
+  margin-left: 6px;
+  font-size: 0.9rem;
+}
+
+.carrito {
+  background: rgba(0, 0, 0, 0.85);
+  border: 2px solid gold;
+  border-radius: 12px;
+  padding: 1.5rem;
+  width: 320px;
+  margin: 2rem auto;
+  color: #f5f5f5;
+  font-family: 'Cinzel', serif;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+}
+
+.carrito h2 {
+  text-align: center;
+  color: gold;
+  margin-bottom: 1rem;
+}
+
+.carrito-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0.6rem;
+  margin-bottom: 0.8rem;
+  background: rgba(255, 215, 0, 0.05);
+  border-radius: 8px;
+}
+
+.carrito-item img {
+  width: 50px;
+  height: auto;
+  border: 1px solid gold;
+  border-radius: 5px;
+}
+
+.carrito-info {
+  flex: 1;
+}
+
+.carrito-info .titulo {
+  font-weight: bold;
+  color: #fff;
+  margin: 0;
+}
+
+.carrito-info .precio {
+  color: gold;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.carrito-item .eliminar {
+  background: none;
+  border: none;
+  color: gold;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.carrito-item .eliminar:hover {
+  color: #d4af37;
+  transform: scale(1.2);
+}
+
+.carrito-total {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  margin: 1rem 0;
+  color: gold;
+  border-top: 1px solid gold;
+  padding-top: 0.5rem;
+}
+
+.checkout {
+  width: 100%;
+  background: gold;
+  color: #111;
+  border: none;
+  padding: 0.8rem;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.checkout:hover {
+  background: #d4af37;
+  transform: scale(1.05);
+}
+/* Fin Mi Pedido (Carrito) */
+
+
+/* Inicio Sección Nosotros */
+.nosotros {
+  position: relative;
+  background: #2b2b2b;
+  color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.nosotros::before {
+  content: "ᛇ ᛈ ᛉ ᛊ ᚠ ᚢ ᚦ ᚨ ᚱ ᚲ ᚷ ᚹ ᚺ ᚾ ᛁ ᛃ";
+  position: absolute;
+  top: 130px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-20deg);
+  font-size: 100px;
+  color: rgba(255, 255, 255, 0.05);
+  white-space: nowrap;
+  z-index: 0;
+}
+
+.nosotros-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.nosotros h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: #d4af37;
+}
+
+.nosotros p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #ddd;
+}
+/* Fin Nosotros */
+
+
+/* Inicio Sección Reseñas */
+.reseña-seccion {
+  background-color: #2b2b2b;
+  padding: 40px 20px;
+  color: #fff;
+  text-align: center;
+}
+
+.reseña-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  overflow: visible;
+  width: 100%;
+}
+
+.reseña-card {
+  background-color: #222;
+  border: 1px solid #444;
+  border-radius: 10px;
+  flex-wrap: wrap;
+  padding: 20px;
+  width: 80%;
+  max-width: 600px;
+  color: #ddd;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.reseña-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+}
+
+/* Estrellas */
+.reseña-estrellas {
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+.star {
+  font-size: 1rem;
+  color: rgba(255,215,0,0.25); /* vacía */
+  margin-right: 2px;
+}
+.star.filled {
+  color: gold; /* llena */
+}
+
+/* Controles (likes, botón) */
+.reseña-controles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.like-btn {
+  background: transparent;
+  border: 1px solid gold;
+  color: gold;
+  padding: 0.4rem 0.6rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: transform 0.15s ease, background 0.2s ease;
+}
+.like-btn:hover {
+  transform: scale(1.05);
+  background: rgba(255,215,0,0.08);
+}
+
+.like-count {
+  background: gold;
+  color: #111;
+  padding: 0.25rem 0.5rem;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+/* Botón secundario fuera de la card */
+.btn-secundario {
+  margin-top: 1rem;
+  padding: 0.6rem 1rem;
+  background: transparent;
+  border: 1px solid rgba(255,215,0,0.18);
+  color: gold;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.btn-secundario:hover {
+  background: rgba(255,215,0,0.06);
+}
+
+/* Fin Reseñas */
+
+
+/* Inicio Formulario de contacto */
+.contacto {
+  max-width: 600px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.7);
+  border: 2px solid gold;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+}
+
+.contacto h2 {
+  text-align: center;
+  color: gold;
+  margin-bottom: 1.5rem;
+  font-family: 'Cinzel', serif;
+  letter-spacing: 2px;
+}
+
+.formulario-contacto {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.formulario-contacto label {
+  color: #f5f5f5;
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea {
+  padding: 0.8rem;
+  border: 1px solid #444;
+  border-radius: 8px;
+  background: #1a1a1a;
+  color: #f5f5f5;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.formulario-contacto input:focus,
+.formulario-contacto textarea:focus {
+  outline: none;
+  border-color: gold;
+  box-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
+}
+
+.formulario-contacto button {
+  background: gold;
+  color: #1a1a1a;
+  font-weight: bold;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.formulario-contacto button:hover {
+  background: #d4af37;
+  transform: scale(1.05);
+}
+/* Fin Formulario de Contacto */
+
+
+/* Comienzo Footer */
+.footer {
+  background: #111;
+  color: #f5f5f5;
+  border-top: 1px solid gold;
+  padding: 2rem 1rem 1rem;
+  font-family: 'Cinzel', serif;
+}
+
+.footer-contenido {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-seccion h3,
+.footer-seccion h4 {
+  color: gold;
+  margin-bottom: 0.5rem;
+  letter-spacing: 2px;
+}
+
+.footer-seccion p {
+  font-size: 0.95rem;
+  color: #ddd;
+  line-height: 1.5;
+}
+
+.footer-seccion ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-seccion ul li {
+  margin: 0.4rem 0;
+}
+
+.footer-seccion ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-seccion ul li a:hover {
+  color: gold;
+}
+
+.footer-copy {
+  text-align: center;
+  border-top: 1px solid rgba(255, 215, 0, 0.3);
+  margin-top: 2rem;
+  padding-top: 1rem;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+/* Fin Footer */
+
+@media(max-width: 768px) {}
